@@ -7,7 +7,7 @@
 use std::{env, fs, iter, str};
 
 use camino::Utf8PathBuf;
-use marlin_verilator::PortDirection;
+use marlin_verilator::{PortDirection, WaveForm};
 use marlin_verilog_macro_builder::{MacroArgs, build_verilated_struct};
 use proc_macro::TokenStream;
 use veryl_parser::{

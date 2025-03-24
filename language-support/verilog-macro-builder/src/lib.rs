@@ -6,7 +6,7 @@
 
 use std::{collections::HashMap, path::Path};
 
-use marlin_verilator::PortDirection;
+use marlin_verilator::{PortDirection, WaveForm};
 use proc_macro2::TokenStream;
 use quote::{format_ident, quote};
 use sv_parser::{self as sv, Locate, RefNode, unwrap_node};

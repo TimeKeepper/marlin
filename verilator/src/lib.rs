@@ -65,6 +65,22 @@ pub mod types {
     pub type WData = EData;
 }
 
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Hash, PartialOrd, Ord)]
+pub enum WaveForm {
+    Vcd,
+    Fst,
+}
+
+impl fmt::Display for WaveForm {
+    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
+        match self {
+            WaveForm::Vcd => "vcd",
+            WaveForm::Fst => "fst",
+        }
+        .fmt(f)
+    }
+}
+
 /// <https://www.digikey.com/en/maker/blogs/2024/verilog-ports-part-7-of-our-verilog-journey>
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Hash, PartialOrd, Ord)]
 pub enum PortDirection {

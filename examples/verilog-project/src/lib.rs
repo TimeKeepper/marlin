@@ -13,6 +13,7 @@
 // this program.  If not, see <https://www.gnu.org/licenses/>.
 
 use marlin::verilog::prelude::*;
+use marlin::verilator::WaveForm;
 
 #[verilog(src = "src/main.sv", name = "main")]
 pub struct Main;
